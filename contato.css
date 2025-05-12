@@ -1,0 +1,338 @@
+/* Estilos gerais para o corpo da página */
+body {
+    margin: 0; /* Remove margens padrão do navegador */
+    font-family: 'Poppins', sans-serif; /* Usa a fonte Poppins para uma aparência moderna */
+    background-color: #f4f9f7; /* Fundo bege claro para um tom suave */
+    color: #333333; /* Cor cinza escura para o texto, melhor legibilidade */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor leitura */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #2e4a66; /* Azul escuro sofisticado para o cabeçalho */
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    width: 100%; /* Ocupa toda a largura da tela */
+    top: 0; /* Alinha ao topo */
+    z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil para profundidade */
+}
+
+/* Container do cabeçalho para centralizar conteúdo */
+.header-container {
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: flex; /* Usa flexbox para alinhar logo e menu */
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 5px 20px; /* Preenchimento interno compacto */
+}
+
+/* Estilos para o logotipo */
+.logo-img {
+    height: 50px; /* Altura do logotipo ajustada */
+    width: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas para suavidade */
+    background-color: #ffffff; /* Fundo branco para destacar a logo */
+    padding: 5px; /* Preenchimento interno para criar um espaço ao redor da imagem */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    transition: transform 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+/* Efeito hover na logo */
+.logo-img:hover {
+    transform: scale(1.05); /* Aumenta a logo em 5% ao passar o mouse */
+}
+
+/* Classe para animação de entrada da logo */
+.logo-animate {
+    animation: fadeInUp 1s ease-out forwards; /* Aplica a animação de entrada */
+}
+
+/* Define a animação de entrada (fade-in com movimento para cima) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(20px); /* Começa 20px abaixo da posição final */
+    }
+    100% {
+        opacity: 1; /* Fica totalmente visível */
+        transform: translateY(0); /* Move para a posição final */
+    }
+}
+
+/* Estilos para o menu de navegação */
+nav {
+    display: flex; /* Usa flexbox para alinhar os links */
+}
+
+/* Estilos para a lista de links de navegação */
+.nav-links {
+    list-style: none; /* Remove marcadores padrão da lista */
+    display: flex; /* Alinha os links horizontalmente */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+/* Estilos para os itens da lista de navegação */
+.nav-links li {
+    margin: 0 10px; /* Espaçamento entre os links */
+}
+
+/* Estilos para os links de navegação */
+.nav-links a {
+    color: #ffffff; /* Cor branca para os links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-weight: 400; /* Peso médio para a fonte */
+    transition: color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+/* Estilo para o link ativo (página atual) */
+.nav-links a.active {
+    color: #a3c7d6; /* Azul claro para destacar o link ativo */
+    font-weight: 600; /* Peso mais bold para o link ativo */
+}
+
+/* Efeito hover nos links de navegação */
+.nav-links a:hover {
+    color: #a3c7d6; /* Cor azul clara ao passar o mouse */
+}
+
+/* Estilos para a seção de contato */
+.contato {
+    padding: 100px 20px 60px; /* Preenchimento considerando o header fixo */
+    background-color: #ffffff; /* Fundo branco para contraste */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Container para centralizar o conteúdo da seção de contato */
+.contato-container {
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Estilos para o título da seção de contato */
+.contato h1 {
+    font-size: 40px; /* Tamanho grande para o título */
+    color: #2e4a66; /* Azul escuro para consistência */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para o subtítulo da seção de contato */
+.contato p {
+    font-size: 18px; /* Tamanho do texto */
+    color: #333333; /* Cinza escuro para legibilidade */
+    margin-bottom: 40px; /* Espaçamento abaixo do subtítulo */
+}
+
+/* Container para o formulário e informações de contato */
+.contato-content {
+    display: flex; /* Usa flexbox para alinhar formulário e informações */
+    justify-content: space-between; /* Espaça os elementos */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 30px; /* Espaçamento entre os elementos */
+}
+
+/* Estilos para o formulário de contato */
+.contato-form {
+    flex: 1; /* Ocupa espaço disponível */
+    min-width: 300px; /* Largura mínima */
+    background-color: #f4f9f7; /* Fundo bege claro para contraste */
+    padding: 30px; /* Preenchimento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para o título do formulário */
+.contato-form h2 {
+    font-size: 28px; /* Tamanho do título */
+    color: #2e4a66; /* Azul escuro para consistência */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para os grupos de formulário (label + input/textarea) */
+.form-group {
+    margin-bottom: 20px; /* Espaçamento entre os campos */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilos para os labels do formulário */
+.form-group label {
+    display: block; /* Faz o label ocupar uma linha inteira */
+    font-size: 16px; /* Tamanho do texto */
+    color: #333333; /* Cinza escuro para legibilidade */
+    margin-bottom: 5px; /* Espaçamento abaixo do label */
+}
+
+/* Estilos para os campos de entrada (input e textarea) */
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px; /* Preenchimento interno */
+    border: 1px solid #a3c7d6; /* Borda azul clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    color: #333333; /* Cor do texto */
+    background-color: #ffffff; /* Fundo branco */
+    transition: border-color 0.3s ease; /* Transição suave para a borda */
+}
+
+/* Efeito focus nos campos de entrada */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #6a9d7f; /* Borda verde suave ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilos para o botão de envio */
+.botao {
+    padding: 12px 30px; /* Preenchimento interno do botão */
+    background-color: #6a9d7f; /* Verde suave para o botão */
+    color: #ffffff; /* Cor branca para o texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 25px; /* Bordas arredondadas */
+    font-weight: 600; /* Peso bold para o texto */
+    cursor: pointer; /* Muda o cursor para pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito hover no botão */
+.botao:hover {
+    background-color: #4e7761; /* Verde mais escuro ao passar o mouse */
+    transform: translateY(-3px); /* Levanta o botão ligeiramente */
+}
+
+/* Estilos para as informações de contato */
+.contato-info {
+    flex: 1; /* Ocupa espaço disponível */
+    min-width: 300px; /* Largura mínima */
+    background-color: #f4f9f7; /* Fundo bege claro para contraste */
+    padding: 30px; /* Preenchimento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para o título das informações de contato */
+.contato-info h2 {
+    font-size: 28px; /* Tamanho do título */
+    color: #2e4a66; /* Azul escuro para consistência */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para os parágrafos das informações */
+.contato-info p {
+    font-size: 16px; /* Tamanho do texto */
+    color: #555555; /* Cinza médio para legibilidade */
+    margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+}
+
+/* Estilos para o mapa */
+.mapa {
+    margin-top: 20px; /* Espaçamento acima do mapa */
+}
+
+/* Estilos para o iframe do mapa */
+.mapa iframe {
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 200px; /* Altura fixa para o mapa */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #2e4a66; /* Azul escuro para o rodapé */
+    color: #ffffff; /* Cor branca para o texto */
+    padding: 40px 20px; /* Preenchimento interno */
+}
+
+/* Container para o conteúdo do rodapé */
+.footer-container {
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+    display: flex; /* Usa flexbox para alinhar as seções */
+    justify-content: space-between; /* Espaça as seções */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 20px; /* Espaçamento entre as seções */
+}
+
+/* Estilos para a seção de informações do rodapé */
+.footer-info h3 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para os parágrafos da seção de informações */
+.footer-info p {
+    font-size: 16px; /* Tamanho do texto */
+    margin: 5px 0; /* Espaçamento vertical */
+}
+
+/* Estilos para a seção de redes sociais */
+.footer-social h3 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para os links de redes sociais */
+.social-link {
+    color: #a3c7d6; /* Azul claro para os links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    margin: 0 10px; /* Espaçamento horizontal */
+    font-size: 16px; /* Tamanho do texto */
+    transition: color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+/* Efeito hover nos links de redes sociais */
+.social-link:hover {
+    color: #ffffff; /* Cor branca ao passar o mouse */
+}
+
+/* Estilos para o texto de direitos autorais */
+.footer-copy {
+    text-align: center; /* Alinha ao centro */
+    margin-top: 20px; /* Espaçamento acima */
+    font-size: 14px; /* Tamanho menor para o texto */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    /* Ajustes para o container do cabeçalho em telas menores */
+    .header-container {
+        flex-direction: column; /* Empilha logo e menu verticalmente */
+        padding: 5px 10px; /* Reduz o padding horizontal para telas menores */
+    }
+
+    /* Ajustes para os links de navegação */
+    .nav-links {
+        flex-direction: column; /* Empilha os links verticalmente */
+        align-items: center; /* Centraliza os links */
+    }
+
+    /* Ajustes para os itens da lista de navegação */
+    .nav-links li {
+        margin: 5px 0; /* Reduz o espaçamento vertical entre os links */
+    }
+
+    /* Reduz o tamanho da logo em telas menores */
+    .logo-img {
+        height: 35px; /* Reduz para maior proporcionalidade */
+        padding: 3px; /* Reduz o preenchimento */
+    }
+
+    /* Ajustes para o título da seção de contato */
+    .contato h1 {
+        font-size: 32px; /* Reduz o tamanho do título */
+    }
+
+    /* Ajustes para o subtítulo da seção de contato */
+    .contato p {
+        font-size: 16px; /* Reduz o tamanho do texto */
+    }
+
+    /* Ajustes para o container do rodapé */
+    .footer-container {
+        flex-direction: column; /* Empilha as seções verticalmente */
+        align-items: center; /* Centraliza as seções */
+        text-align: center; /* Alinha o texto ao centro */
+    }
+}

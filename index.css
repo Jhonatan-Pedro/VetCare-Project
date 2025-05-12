@@ -1,0 +1,368 @@
+/* Estilos gerais para o corpo da página */
+body {
+    margin: 0; /* Remove margens padrão do navegador */
+    font-family: 'Poppins', sans-serif; /* Usa a fonte Poppins para uma aparência moderna */
+    background-color: #f4f9f7; /* Fundo bege claro para um tom suave */
+    color: #333333; /* Cor cinza escura para o texto, melhor legibilidade */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor leitura */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #2e4a66; /* Azul escuro sofisticado para o cabeçalho */
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    width: 100%; /* Ocupa toda a largura da tela */
+    top: 0; /* Alinha ao topo */
+    z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil para profundidade */
+}
+
+/* Container do cabeçalho para centralizar conteúdo */
+.header-container {
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: flex; /* Usa flexbox para alinhar logo e menu */
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 5px 20px; /* Reduz o padding vertical de 10px para 5px para uma barra mais compacta */
+}
+
+/* Estilos para o logotipo */
+.logo-img {
+    height: 50px; /* Reduz a altura do logotipo de 60px para 50px para melhor proporção */
+    width: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas para suavidade */
+    background-color: #ffffff; /* Fundo branco para destacar a logo */
+    padding: 5px; /* Preenchimento interno para criar um espaço ao redor da imagem */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    transition: transform 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+/* Efeito hover na logo */
+.logo-img:hover {
+    transform: scale(1.05); /* Aumenta a logo em 5% ao passar o mouse */
+}
+
+/* Classe para animação de entrada da logo */
+.logo-animate {
+    animation: fadeInUp 1s ease-out forwards; /* Aplica a animação de entrada */
+}
+
+/* Define a animação de entrada (fade-in com movimento para cima) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(20px); /* Começa 20px abaixo da posição final */
+    }
+    100% {
+        opacity: 1; /* Fica totalmente visível */
+        transform: translateY(0); /* Move para a posição final */
+    }
+}
+
+/* Estilos para o menu de navegação */
+nav {
+    display: flex; /* Usa flexbox para alinhar os links */
+}
+
+/* Estilos para a lista de links de navegação */
+.nav-links {
+    list-style: none; /* Remove marcadores padrão da lista */
+    display: flex; /* Alinha os links horizontalmente */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+/* Estilos para os itens da lista de navegação */
+.nav-links li {
+    margin: 0 10px; /* Reduz o espaçamento entre os links de 15px para 10px */
+}
+
+/* Estilos para os links de navegação */
+.nav-links a {
+    color: #ffffff; /* Cor branca para os links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-weight: 400; /* Peso médio para a fonte */
+    transition: color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+/* Efeito hover nos links de navegação */
+.nav-links a:hover {
+    color: #a3c7d6; /* Cor azul clara ao passar o mouse */
+}
+
+/* Estilos para a seção de apresentação (hero) */
+.apresentacao {
+    height: 100vh; /* Ocupa 100% da altura da janela */
+    background-image: url('./img/image.jpg'); /* Caminho para a imagem local */
+    background-size: cover; /* Cobre toda a área da seção */
+    background-position: center; /* Centraliza a imagem */
+    display: flex; /* Usa flexbox para centralizar conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    position: relative; /* Permite posicionar elementos filhos relativamente */
+}
+
+/* Animação de entrada para a seção apresentação */
+.apresentacao-animate {
+    animation: fadeInUp 2s ease-out forwards; /* Aplica a animação de entrada */
+}
+
+/* Camada de sobreposição para a seção hero */
+.apresentacao::before {
+    content: ''; /* Conteúdo vazio para a pseudo-classe */
+    position: absolute; /* Posiciona sobre a imagem de fundo */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    background-color: rgba(0, 0, 0, 0.5); /* Sobreposição preta com 50% de opacidade */
+    z-index: 1; /* Coloca a sobreposição acima da imagem de fundo */
+}
+
+/* Container para o conteúdo da seção hero */
+.hero-content {
+    position: relative; /* Posiciona acima da sobreposição */
+    z-index: 2; /* Garante que o conteúdo fique acima da sobreposição */
+    color: #ffffff; /* Cor branca para o texto */
+    max-width: 800px; /* Limita a largura do conteúdo */
+    padding: 20px; /* Adiciona preenchimento interno */
+}
+
+/* Estilos para o título principal da seção hero */
+.apresentacao h1 {
+    font-size: 56px; /* Tamanho grande para o título */
+    font-weight: 600; /* Peso bold para destaque */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para o subtítulo da seção hero */
+.apresentacao h2 {
+    font-size: 28px; /* Tamanho menor para o subtítulo */
+    font-weight: 300; /* Peso leve para contraste */
+    margin-bottom: 20px; /* Espaçamento abaixo do subtítulo */
+}
+
+/* Estilos para o parágrafo da seção hero */
+.apresentacao p {
+    font-size: 18px; /* Tamanho do texto */
+    margin-bottom: 30px; /* Espaçamento abaixo do parágrafo */
+}
+
+/* Estilos para o botão da seção hero */
+.apresentacao .botao {
+    padding: 12px 30px; /* Preenchimento interno do botão */
+    background-color: #6a9d7f; /* Verde suave para o botão */
+    color: #ffffff; /* Cor branca para o texto do botão */
+    text-decoration: none; /* Remove sublinhado padrão */
+    border-radius: 25px; /* Bordas arredondadas */
+    font-weight: 600; /* Peso bold para o texto */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito hover no botão da seção hero */
+.apresentacao .botao:hover {
+    background-color: #4e7761; /* Verde mais escuro ao passar o mouse */
+    transform: translateY(-3px); /* Levanta o botão ligeiramente */
+}
+
+/* Estilos para a seção de objetivo */
+.objetivo {
+    background-color: #ffffff; /* Fundo branco para contraste */
+    padding: 60px 20px; /* Preenchimento interno generoso */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilos para o título da seção de objetivo */
+.objetivo h2 {
+    font-size: 40px; /* Tamanho grande para o título */
+    color: #2e4a66; /* Azul escuro para consistência */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para o parágrafo da seção de objetivo */
+.objetivo p {
+    font-size: 18px; /* Tamanho do texto */
+    color: #333333; /* Cinza escuro para legibilidade */
+    max-width: 600px; /* Limita a largura do texto */
+    margin: 0 auto 30px; /* Centraliza e adiciona espaçamento */
+}
+
+/* Estilos para o ícone decorativo na seção de objetivo */
+.objetivo-icon {
+    border-radius: 12px; /*Arredonda as bordas da imagem*/
+}
+
+/*Efeito hover na imagem abaixo da sessão nossa missão*/
+.objetivo-animation:hover {
+    transform: translateY(-10px); /* Levanta o cartão ao passar o mouse */
+    transition: transform 0.5s ease; /* Adiciona uma transição suave */
+}
+
+/* Estilos para a seção de destaques */
+.destaques {
+    background-color: #f4f9f7; /* Fundo bege claro para consistência */
+    padding: 60px 20px; /* Preenchimento interno generoso */
+}
+
+/* Estilos para o título da seção de destaques */
+.destaques h2 {
+    font-size: 40px; /* Tamanho grande para o título */
+    color: #2e4a66; /* Azul escuro para consistência */
+    text-align: center; /* Alinha ao centro */
+    margin-bottom: 40px; /* Espaçamento abaixo do título */
+}
+
+/* Container para os cartões de serviços */
+.servicos-container {
+    display: flex; /* Usa flexbox para alinhar os cartões */
+    justify-content: center; /* Centraliza os cartões */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 30px; /* Espaçamento entre os cartões */
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Estilos para os cartões de serviço */
+.servico-card {
+    width: 280px; /* Largura fixa para os cartões */
+    background-color: #ffffff; /* Fundo branco para os cartões */
+    padding: 20px; /* Preenchimento interno */
+    text-align: center; /* Alinha o texto ao centro */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito hover nos cartões de serviço */
+.servico-card:hover {
+    transform: translateY(-10px); /* Levanta o cartão ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+}
+
+/* Estilos para as imagens dos cartões */
+.servico-card img {
+    width: 100%; /* Ocupa toda a largura do cartão */
+    height: 150px; /* Altura fixa para consistência */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+}
+
+/* Estilos para o título dos cartões */
+.servico-card h3 {
+    font-size: 24px; /* Tamanho do título */
+    color: #2e4a66; /* Azul escuro para consistência */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para o parágrafo dos cartões */
+.servico-card p {
+    font-size: 16px; /* Tamanho do texto */
+    color: #555555; /* Cinza médio para legibilidade */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #2e4a66; /* Azul escuro para o rodapé */
+    color: #ffffff; /* Cor branca para o texto */
+    padding: 40px 20px; /* Preenchimento interno */
+}
+
+/* Container para o conteúdo do rodapé */
+.footer-container {
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+    display: flex; /* Usa flexbox para alinhar as seções */
+    justify-content: space-between; /* Espaça as seções */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 20px; /* Espaçamento entre as seções */
+}
+
+/* Estilos para a seção de informações do rodapé */
+.footer-info h3 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para os parágrafos da seção de informações */
+.footer-info p {
+    font-size: 16px; /* Tamanho do texto */
+    margin: 5px 0; /* Espaçamento vertical */
+}
+
+/* Estilos para a seção de redes sociais */
+.footer-social h3 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para os links de redes sociais */
+.social-link {
+    color: #a3c7d6; /* Azul claro para os links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    margin: 0 10px; /* Espaçamento horizontal */
+    font-size: 16px; /* Tamanho do texto */
+    transition: color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+/* Efeito hover nos links de redes sociais */
+.social-link:hover {
+    color: #ffffff; /* Cor branca ao passar o mouse */
+}
+
+/* Estilos para o texto de direitos autorais */
+.footer-copy {
+    text-align: center; /* Alinha ao centro */
+    margin-top: 20px; /* Espaçamento acima */
+    font-size: 14px; /* Tamanho menor para o texto */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    /* Ajustes para o container do cabeçalho em telas menores */
+    .header-container {
+        flex-direction: column; /* Empilha logo e menu verticalmente */
+        padding: 5px 10px; /* Reduz o padding horizontal para telas menores */
+    }
+
+    /* Ajustes para os links de navegação */
+    .nav-links {
+        flex-direction: column; /* Empilha os links verticalmente */
+        align-items: center; /* Centraliza os links */
+    }
+
+    /* Ajustes para os itens da lista de navegação */
+    .nav-links li {
+        margin: 5px 0; /* Reduz o espaçamento vertical entre os links para 5px */
+    }
+
+    /* Reduz o tamanho da logo em telas menores */
+    .logo-img {
+        height: 35px; /* Reduz de 40px para 35px para maior proporcionalidade */
+        padding: 3px; /* Reduz o preenchimento */
+    }
+
+    /* Ajustes para o título da seção hero */
+    .apresentacao h1 {
+        font-size: 36px; /* Reduz o tamanho do título */
+    }
+
+    /* Ajustes para o subtítulo da seção hero */
+    .apresentacao h2 {
+        font-size: 20px; /* Reduz o tamanho do subtítulo */
+    }
+
+    /* Ajustes para o parágrafo da seção hero */
+    .apresentacao p {
+        font-size: 16px; /* Reduz o tamanho do texto */
+    }
+
+    /* Ajustes para o container do rodapé */
+    .footer-container {
+        flex-direction: column; /* Empilha as seções verticalmente */
+        align-items: center; /* Centraliza as seções */
+        text-align: center; /* Alinha o texto ao centro */
+    }
+}
